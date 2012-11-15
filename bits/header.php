@@ -66,3 +66,7 @@ function i_am_at($page) {
             <?php } ?>
           </ol>
         </navigation>
+href="progress.php">See Progress</a></li>
+            <?php } ?>
+          </ol>
+        </navigation>

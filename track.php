@@ -123,4 +123,15 @@ function build_calendar($month,$year,$dateArray) {
         </section>
 
 
+<? include ('bits/footer.php') ?>nents['mon'] - 2) % 12) + 1; 			     
+
+
+               $year = $dateComponents['year'];
+
+               $dateArray = array();
+               echo build_calendar($month,$year,$dateArray);
+          ?>
+        </section>
+
+
 <? include ('bits/footer.php') ?>

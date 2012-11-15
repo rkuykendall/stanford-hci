@@ -120,4 +120,30 @@
         
 
 
+<?php include ('bits/footer.php') ?>en day sum: ']
+            });
+          </script>
+          
+        </section>
+        
+        <section>
+          <h1>Last 7 Days</h1>
+
+          <div class="graph" id="pie"></div>
+          
+          <script>
+            Morris.Donut({
+              element: 'pie',
+              data: [
+                {label: "Good Days", value: 1},
+                {label: "Bad Days", value: 6}
+              ]
+            });
+          </script>
+          
+        </section>
+        
+        
+
+
 <?php include ('bits/footer.php') ?>
