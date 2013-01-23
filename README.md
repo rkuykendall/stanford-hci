@@ -1,4 +1,4 @@
 Stanford HCI
 ============
 
-Stanford Human-Computer Interaction Design class [Coursera](http://www.coursera.org/) Prototype
+This was my Stanford Human-Computer Interaction Design [Coursera](http://www.coursera.org/) class Prototype, consisting of only UI elements in HTML/CSS/JS.
