@@ -3,7 +3,7 @@
 function i_am_at($page) {
     $current = $_SERVER['REQUEST_URI'];
     $current = str_replace('.php','',$current);
-    $current = str_replace('stanford-hcicopy','',$current);
+    $current = str_replace('stanford-hci4','',$current);
     $current = str_replace('/','',$current);
     if ($current == $page) {
       return true;
@@ -41,12 +41,15 @@ function i_am_at($page) {
     </head>
     <body>
         <navigation>
-          <h1>Kick Me</h1>
+          <?php if (i_am_at('') or i_am_at('index')) { ?>
+            <h1><a href="index.php">Kick Me</a></h1>
+            <span>Set daily goals and track your progress to change habits.</span>
+          <?php } else { ?>
+            <h1><a href="progress.php">Kick Me</a></h1>
+          <?php } ?>
+            
           <ol>
             <?php if (i_am_at('') or i_am_at('index')) { ?>
-              <li class="current"><a href="index.php">Get Started</a></li>
-              <li class="inactive">Track Work</li>
-              <li class="inactive">See Progress</li>
             <?php } elseif (i_am_at('track')) { ?>
               <li><a href="edit.php">Edit Information</a></li>
               <li class="current"><a href="track.php">Track Work</a></li>
@@ -63,10 +66,6 @@ function i_am_at($page) {
               <li class="current"><a href="edit.php">Edit Information</a></li>
               <li><a href="track.php">Track Work</a></li>
               <li><a href="progress.php">See Progress</a></li>
-            <?php } ?>
-          </ol>
-        </navigation>
-href="progress.php">See Progress</a></li>
             <?php } ?>
           </ol>
         </navigation>

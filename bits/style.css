@@ -17,6 +17,16 @@ navigation {
   navigation h1 {
     display: inline-block;
     font-size: 40px;
+    color: black;
+    }
+    navigation h1 a {
+      text-decoration: none;
+      color: inherit;
+  }
+  navigation span {
+    float: right;
+    margin: 20px 0 0 0;
+    font-size: 16px;
   }
   navigation ol {
     display: inline-block;
@@ -28,19 +38,21 @@ navigation {
       padding: 2px;
       color: #fff;
     }
-    navigation ol li.inactive {
-      background-color: #ddd;
-      padding: 8px 10px;
-    }
     navigation ol li a {
       display: block;
-      color: #fff;
-      background-color: #333;
       text-decoration: none;
-      padding: 8px 10px;
+      padding: 6px 8px;
+      border: 2px solid black;
+
+      color: white;
+      background-color: black;
+    }
+    navigation ol li a:hover {
+      background-color: #666;
     }
     navigation ol li.current a {
-      background-color: #000;
+      color: black;
+      background-color: white;
 }
 
 em {
@@ -74,6 +86,8 @@ section h1 {
   padding: 10px 15px;
   margin: 0 0 0 -15px;
   color: #F6F6F6;
+  text-shadow: 1px 1px 0px #777;
+  border-bottom: 1px solid #aaa;
 }
 
 section h1 {
@@ -96,16 +110,25 @@ section h1 {
   }
   .button {
     display: inline-block;
-    padding: 8px 10px;
+    padding: 6px 8px;
+    border: 2px solid black;
     color: #fff;
     background-color: #333;
     text-decoration: none;
+  }
+  .button:hover {
+    background-color: #666;
 }
 
 
 #encouragement {
   text-align: center;
   font-size: 25px;
+}
+
+table.calendar {
+  width: 618px;
+  margin: 0 auto;
 }
 
 
@@ -122,11 +145,18 @@ table.calendar th {
   border: 2px solid #F6F6F6;
   background-color: #bbb;
   color: #fff;
+  
+  text-shadow: 1px 1px 0px #777;
+}
+
+
+table.calendar th {
+  margin: 1px 0;
 }
 
 table.calendar td.day {
-  width: 77px;
-  height: 77px;
+  width: 74px;
+  height: 74px;
   padding: 5px;
   font-weight: 600;
   background-color: #eee;
@@ -135,33 +165,12 @@ table.calendar td.day {
 }
 
 table.calendar td.day.good {
-  background: #eee url('star-bg.png') no-repeat top left;
+  background: #eee url('star-bg.png') no-repeat bottom right;
   background-size: contain;
 }
 
 table.calendar td.day:hover {
-  background: #eee url('star-bg-grey.png') no-repeat top left;
-  background-size: contain;
-}
-
-table.calendar td.day a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  color: inherit;
-  text-decoration: none;
-}
-
-
-
-
-
-top left;
-  background-size: contain;
-}
-
-table.calendar td.day:hover {
-  background: #eee url('star-bg-grey.png') no-repeat top left;
+  background: #666 url('star-bg-grey.png') no-repeat bottom right;
   background-size: contain;
 }
 

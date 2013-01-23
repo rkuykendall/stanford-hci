@@ -1,4 +1,14 @@
 <? include ('bits/header.php') ?>
+
+<script>
+
+  $(document).ready(function() {
+    $('a[href$="#"]').click(function() {
+      alert("Clicking will toggle star / unstar when interface testing is complete and backend code is written.");
+    });
+  });
+
+</script>
 <?php
 
 function build_calendar($month,$year,$dateArray) {
@@ -78,7 +88,7 @@ function build_calendar($month,$year,$dateArray) {
           if ($good[intval($currentDay-1)] == 1) {
             $class .= " good";
           }
-          $calendar .= "<td class='day$class' rel='$date'><a href=\"track.php\">$currentDay</a></td>";
+          $calendar .= "<td class='day$class' rel='$date'><a href=\"#\">$currentDay</a></td>";
 
           // Increment counters
  
@@ -114,16 +124,6 @@ function build_calendar($month,$year,$dateArray) {
                $month = $dateComponents['mon']; 			     
                // $month = ($dateComponents['mon'] % 12) + 1;
                // $month = (($dateComponents['mon'] - 2) % 12) + 1; 			     
-
-
-               $year = $dateComponents['year'];
-
-               echo build_calendar($month,$year,$dateArray);
-          ?>
-        </section>
-
-
-<? include ('bits/footer.php') ?>nents['mon'] - 2) % 12) + 1; 			     
 
 
                $year = $dateComponents['year'];
